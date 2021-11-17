@@ -1,0 +1,12 @@
+D:\source\Web\Util\bin\Debug\net6.0\Util.deps.json
+D:\source\Web\Util\bin\Debug\net6.0\Util.dll
+D:\source\Web\Util\bin\Debug\net6.0\ref\Util.dll
+D:\source\Web\Util\bin\Debug\net6.0\Util.pdb
+D:\source\Web\Util\obj\Debug\net6.0\Util.csproj.AssemblyReference.cache
+D:\source\Web\Util\obj\Debug\net6.0\Util.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\Web\Util\obj\Debug\net6.0\Util.AssemblyInfoInputs.cache
+D:\source\Web\Util\obj\Debug\net6.0\Util.AssemblyInfo.cs
+D:\source\Web\Util\obj\Debug\net6.0\Util.csproj.CoreCompileInputs.cache
+D:\source\Web\Util\obj\Debug\net6.0\Util.dll
+D:\source\Web\Util\obj\Debug\net6.0\ref\Util.dll
+D:\source\Web\Util\obj\Debug\net6.0\Util.pdb

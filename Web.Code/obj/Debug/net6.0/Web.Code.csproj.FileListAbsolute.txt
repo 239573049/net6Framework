@@ -1,0 +1,12 @@
+D:\source\Data Crawl\Web.Code\bin\Debug\net6.0\Web.Code.deps.json
+D:\source\Data Crawl\Web.Code\bin\Debug\net6.0\Web.Code.dll
+D:\source\Data Crawl\Web.Code\bin\Debug\net6.0\ref\Web.Code.dll
+D:\source\Data Crawl\Web.Code\bin\Debug\net6.0\Web.Code.pdb
+D:\source\Data Crawl\Web.Code\obj\Debug\net6.0\Web.Code.csproj.AssemblyReference.cache
+D:\source\Data Crawl\Web.Code\obj\Debug\net6.0\Web.Code.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\Data Crawl\Web.Code\obj\Debug\net6.0\Web.Code.AssemblyInfoInputs.cache
+D:\source\Data Crawl\Web.Code\obj\Debug\net6.0\Web.Code.AssemblyInfo.cs
+D:\source\Data Crawl\Web.Code\obj\Debug\net6.0\Web.Code.csproj.CoreCompileInputs.cache
+D:\source\Data Crawl\Web.Code\obj\Debug\net6.0\Web.Code.dll
+D:\source\Data Crawl\Web.Code\obj\Debug\net6.0\ref\Web.Code.dll
+D:\source\Data Crawl\Web.Code\obj\Debug\net6.0\Web.Code.pdb
