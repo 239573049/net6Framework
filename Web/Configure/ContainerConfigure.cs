@@ -7,7 +7,7 @@ namespace Web.Configure
     public class ContainerConfigure
     {
         /// <summary>
-        /// 容器
+        /// Container for dependency injection
         /// </summary>
         /// <param name="host"></param>
         public static void Configure(WebApplicationBuilder builder)
@@ -17,11 +17,16 @@ namespace Web.Configure
             {
                 var basePath = AppDomain.CurrentDomain.BaseDirectory;
 
-                var servicesDllFile = Path.Combine(basePath, "Service.dll");
-                
+                var servicesDllFile = Path.Combine(basePath, "Service.dll");//需要依赖注入的项目生成的dll文件名称
+                var repositoryDllFile = Path.Combine(basePath, "Repository.dll");
                 var assemblysServices = Assembly.LoadFrom(servicesDllFile);
                 containerBuilder.RegisterAssemblyTypes(assemblysServices)
-                    .Where(x => x.FullName.EndsWith("Service"))
+                    .Where(x => x.FullName.EndsWith("Service"))//对比名称最后是否相同然后注入
+                          .AsImplementedInterfaces()
+                          .InstancePerDependency();
+                var assemblysRepository = Assembly.LoadFrom(repositoryDllFile);
+                containerBuilder.RegisterAssemblyTypes(assemblysRepository)
+                    .Where(x=>x.FullName.EndsWith("Repository"))
                           .AsImplementedInterfaces()
                           .InstancePerDependency();
             });

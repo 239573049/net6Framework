@@ -1,4 +1,5 @@
-﻿using Swashbuckle.AspNetCore.SwaggerUI;
+﻿using Microsoft.AspNetCore.Builder;
+using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace Web.Configure
 {
@@ -14,24 +15,24 @@ namespace Web.Configure
             if (app == null) throw new Exception("WebApplication is NUll");
             if (app.Environment.IsDevelopment())
             {
-                app.UseSwagger();
-                app.UseSwaggerUI(c =>
-                {
-                    c.RoutePrefix = "swagger";
-                    c.DocExpansion(DocExpansion.List);
-                });
                 app.UseDeveloperExceptionPage();
             }
             app.UseRouting();
             app.UseStaticFiles();
-            app.UseAuthorization();
             app.MapControllers();
-            app.UseCors("CorsPolicy");
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/1/swagger.json", "Web Api");
+                c.DocExpansion(DocExpansion.None);
+                c.DefaultModelsExpandDepth(-1);
+            });
+            app.UseCors("CorsPolicy");//CORS strategy
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-            app.Run();
+            app.Run();//Run App
         }
     }
 }

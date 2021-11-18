@@ -4,7 +4,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>D:\source\Data Crawl\Data Crawl\bin\Release\net6.0\publish\</_PublishTargetUrl>
-    <History>True|2021-11-17T07:19:23.0248222Z;True|2021-11-17T15:17:19.1175883+08:00;True|2021-11-17T15:17:01.8712780+08:00;True|2021-11-17T15:16:47.4091772+08:00;</History>
+    <_PublishTargetUrl>D:\source\Web\Web\bin\Release\net6.0\publish\</_PublishTargetUrl>
+    <History>True|2021-11-18T07:05:12.1209319Z;True|2021-11-18T15:04:58.5134475+08:00;True|2021-11-17T15:19:23.0248222+08:00;True|2021-11-17T15:17:19.1175883+08:00;True|2021-11-17T15:17:01.8712780+08:00;True|2021-11-17T15:16:47.4091772+08:00;</History>
   </PropertyGroup>
 </Project>

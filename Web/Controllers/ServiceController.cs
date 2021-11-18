@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Service;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Controllers
 {
@@ -16,7 +14,7 @@ namespace Web.Controllers
             _dataService = dataService;
         }
         /// <summary>
-        /// 获取测试
+        /// Get test data
         /// </summary>
         /// <returns></returns>
         [HttpGet]
