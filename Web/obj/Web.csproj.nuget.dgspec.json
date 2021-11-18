@@ -173,7 +173,17 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\source\\Web\\Core\\Core.csproj": {
+                "projectPath": "D:\\source\\Web\\Core\\Core.csproj"
+              },
+              "D:\\source\\Web\\Repository\\Repository.csproj": {
+                "projectPath": "D:\\source\\Web\\Repository\\Repository.csproj"
+              },
+              "D:\\source\\Web\\Util\\Util.csproj": {
+                "projectPath": "D:\\source\\Web\\Util\\Util.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

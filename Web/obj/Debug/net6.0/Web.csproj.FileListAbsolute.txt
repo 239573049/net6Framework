@@ -1,4 +1,3 @@
-D:\source\Web\Web\bin\Debug\net6.0\appsettings.Development.json
 D:\source\Web\Web\bin\Debug\net6.0\appsettings.json
 D:\source\Web\Web\bin\Debug\net6.0\Web.exe
 D:\source\Web\Web\bin\Debug\net6.0\Web.deps.json

@@ -18,7 +18,7 @@ namespace Web.Configure
         public static void Configure(IServiceCollection services, IWebHostEnvironment env)
         {
             services.AddSingleton(new AppSettings(env.ContentRootPath));
-            services.AddDbContext<MasterDbContext>(option =>option.UseMySql(AppSettings.App("mysqll"),new MySqlServerVersion(new Version(5,7,29))));
+            services.AddDbContext<MasterDbContext>(option =>option.UseMySql(AppSettings.App("mysql"),new MySqlServerVersion(new Version(6,0,0))));
             services.AddTransient(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
             services.AddTransient(typeof(IMasterDbRepositoryBase<,>), typeof(MasterDbRepositoryBase<,>));
             services.AddControllers();
