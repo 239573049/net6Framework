@@ -21,3 +21,4 @@ D:\source\Web\Web.Code\obj\Debug\net6.0\Web.Code.csproj.CoreCompileInputs.cache
 D:\source\Web\Web.Code\obj\Debug\net6.0\Web.Code.dll
 D:\source\Web\Web.Code\obj\Debug\net6.0\ref\Web.Code.dll
 D:\source\Web\Web.Code\obj\Debug\net6.0\Web.Code.pdb
+D:\source\Web\Web.Code\obj\Debug\net6.0\Web.Code.csproj.AssemblyReference.cache

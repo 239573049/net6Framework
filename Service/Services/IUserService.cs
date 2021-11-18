@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Core.Entitys;
+using Microsoft.EntityFrameworkCore;
 using Repository;
 using Repository.Core;
 using Repository.Repositorys;
@@ -10,6 +11,7 @@ namespace Service.Services
     public interface IUserService
     {
         Task<Guid> CreateUser(UserDto user);
+        Task<List<UserDto>> GetAllUsers(string name);
     }
     public class UserService : BaseService<User>, IUserService
     {
@@ -30,6 +32,12 @@ namespace Service.Services
             data=await currentRepository.AddAsync(data);
             await unitOfWork.SaveChangesAsync();
             return data.Id;
+        }
+
+        public async Task<List<UserDto>> GetAllUsers(string name)
+        {
+            var data=await currentRepository.FindAll(a=>string.IsNullOrEmpty(name)||a.Name.ToLower().Contains(name.ToLower())).ToListAsync();
+            return _mapper.Map<List<UserDto>>(data);
         }
     }
 }

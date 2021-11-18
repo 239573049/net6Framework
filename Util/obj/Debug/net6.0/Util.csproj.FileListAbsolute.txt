@@ -9,3 +9,4 @@ D:\source\Web\Util\obj\Debug\net6.0\Util.csproj.CoreCompileInputs.cache
 D:\source\Web\Util\obj\Debug\net6.0\Util.dll
 D:\source\Web\Util\obj\Debug\net6.0\ref\Util.dll
 D:\source\Web\Util\obj\Debug\net6.0\Util.pdb
+D:\source\Web\Util\obj\Debug\net6.0\Util.csproj.AssemblyReference.cache

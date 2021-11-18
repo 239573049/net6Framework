@@ -21,7 +21,7 @@ namespace Web.Configure
             services.AddDbContext<MasterDbContext>(option =>option.UseMySql(AppSettings.App("mysql"),new MySqlServerVersion(new Version(6,0,0))));
             services.AddTransient(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
             services.AddTransient(typeof(IMasterDbRepositoryBase<,>), typeof(MasterDbRepositoryBase<,>));
-            services.AddControllers();
+            services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);//禁止不可为空的引用类型和必须属性
             services.AddSwaggerSetup("1", "Web Api", "Web API", new SwaggerSetup.Contact { Email = "239573049@qq.com", Name = "XiaoHu", Url = new Uri("https://gitee.com/hejiale010426") });
             services.AddAutoMapper(new List<Assembly> {Assembly.Load("Service"), Assembly.Load("Web.Code") });
             services.AddEndpointsApiExplorer();

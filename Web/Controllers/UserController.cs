@@ -1,5 +1,6 @@
 ﻿using Service.Dto;
 using Service.Services;
+using System.ComponentModel.DataAnnotations;
 
 namespace Web.Controllers
 {
@@ -23,6 +24,16 @@ namespace Web.Controllers
         public async Task<Guid> CreateUser(UserDto user)
         {
             return await _userService.CreateUser(user);
+        }
+        /// <summary>
+        /// 通过名称搜索用户
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        [AcceptVerbs("GET", "POST")]
+        public async Task<List<UserDto>> GetAllUsers(string name)
+        {
+            return await _userService.GetAllUsers(name);
         }
     }
 }
