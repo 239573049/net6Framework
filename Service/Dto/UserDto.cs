@@ -4,6 +4,7 @@ namespace Service.Dto
 {
     public class UserDto
     {
+        public Guid Id { get; set; }
         /// <summary>
         /// 账号
         /// </summary>

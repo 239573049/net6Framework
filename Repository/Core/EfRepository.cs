@@ -57,7 +57,7 @@ namespace Repository.Core
             AttachIfNot(entityList);
             DbSet.RemoveRange(entityList);
         }
-        public void PartialUpdate(IList<TEntity> entityList, List<string> fields)
+        public void PartialUpdate(IList<TEntity> entityList, params string[] fields)
         {
             var type = typeof(TEntity);
             AttachIfNot(entityList);
@@ -194,6 +194,18 @@ namespace Repository.Core
             }
             entities = await DbSet.AsNoTracking().Where(predicate).OrderByDescending(orderBy).Skip((pageNo - 1) * pageSize).Take(pageSize).Select(scalar).ToListAsync();
             return new Tuple<IList<T>, int>(entities, await DbSet.AsNoTracking().Where(predicate).CountAsync());
+        }
+
+        public void Update(TEntity entity, params string[] fields)
+        {
+            var type = typeof(TEntity);
+            AttachIfNot(entity);
+            Context.Entry(entity).State = EntityState.Modified;
+            foreach (var property in type.GetProperties().Where(a => a.PropertyType.FullName != null && !a.PropertyType.FullName.Contains("Merchants.Ams.Core.Entities")))
+            {
+                var fieldName = property.Name;
+                Context.Entry(entity).Property(fieldName).IsModified = fields.Contains(fieldName);
+            }
         }
     }
 }

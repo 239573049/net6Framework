@@ -1,6 +1,5 @@
 ﻿using Service.Dto;
 using Service.Services;
-using System.ComponentModel.DataAnnotations;
 
 namespace Web.Controllers
 {

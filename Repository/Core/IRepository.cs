@@ -114,7 +114,13 @@ namespace Repository.Core
         /// <param name="entityList"></param>
         /// <param name="fields">修改字段名称集合</param>
         /// <returns></returns>
-        void PartialUpdate(IList<TEntity> entityList, List<string> fields);
+        void PartialUpdate(IList<TEntity> entityList, params string[] fields);
+        /// <summary>
+        /// 部分字段更新
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="fields"></param>
+        void Update(TEntity entity,params string[] fields);
         /// <summary>
         /// 删除
         /// </summary>
