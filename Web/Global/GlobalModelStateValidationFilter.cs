@@ -25,7 +25,6 @@ namespace Web.Global
                     modelStateResult.Message = modelStateResult.Message + error.ErrorMessage + "|";
                 }
             }
-
             context.Result = new ObjectResult(modelStateResult);
         }
 

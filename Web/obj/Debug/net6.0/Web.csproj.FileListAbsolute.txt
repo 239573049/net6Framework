@@ -56,3 +56,4 @@ D:\source\Web\Web\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
 D:\source\Web\Web\bin\Debug\net6.0\MessagePack.Annotations.dll
 D:\source\Web\Web\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Protocols.MessagePack.dll
 D:\source\Web\Web\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\source\Web\Web\bin\Debug\net6.0\Web.staticwebassets.runtime.json
