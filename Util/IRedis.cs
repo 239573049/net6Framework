@@ -17,6 +17,7 @@
         Task<long> SRemAsync<T>(string key, params T[] obj);
         Task<T[]> SMembersAsync<T>(string key);
         Task<bool> IsExist(string key);
+        Task<long> SCardAsync(string key);
     }
     public class Redis : IRedis
     {
@@ -159,10 +160,23 @@
         {
             return await RedisHelper.SMembersAsync<T>(key);
         }
-
+        /// <summary>
+        /// 是否存在
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public async Task<bool> IsExist(string key)
         {
             return await RedisHelper.ExistsAsync(key);
+        }
+        /// <summary>
+        /// 获取集合成员数量
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        public Task<long> SCardAsync(string key)
+        {
+            return RedisHelper.SCardAsync(key);
         }
     }
 }

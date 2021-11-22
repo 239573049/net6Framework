@@ -47,7 +47,7 @@ namespace Web.Configure
                         Url = contact.Url
                     }
                 });
-                string[] files = Directory.GetFiles(AppContext.BaseDirectory, "*.xml");
+                string[] files = Directory.GetFiles(AppContext.BaseDirectory, "*.xml");//获取api文档
                 string[] array = files;
                 foreach (string filePath in array)
                 {
