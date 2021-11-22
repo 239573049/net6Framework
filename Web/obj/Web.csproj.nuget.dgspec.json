@@ -260,6 +260,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "CSRedisCore": {
+              "target": "Package",
+              "version": "[3.6.6, )"
+            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -315,7 +319,14 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\source\\Web\\Service\\Service.csproj": {
+                "projectPath": "D:\\source\\Web\\Service\\Service.csproj"
+              },
+              "D:\\source\\Web\\Util\\Util.csproj": {
+                "projectPath": "D:\\source\\Web\\Util\\Util.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -335,6 +346,14 @@
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
             },
             "Microsoft.Extensions.DependencyInjection.Abstractions": {
               "target": "Package",
@@ -424,6 +443,22 @@
             "Autofac.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[7.2.0, )"
+            },
+            "CSRedisCore": {
+              "target": "Package",
+              "version": "[3.6.6, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Protocols.MessagePack": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Redis": {
+              "target": "Package",
+              "version": "[1.1.5, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

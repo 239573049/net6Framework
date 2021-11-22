@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Swashbuckle.AspNetCore.SwaggerUI;
-
+﻿using Swashbuckle.AspNetCore.SwaggerUI;
+using Web.Code.ChatHubs;
 namespace Web.Configure
 {
     public class AppConfigure
@@ -31,6 +30,7 @@ namespace Web.Configure
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<ChatHub>("chatHub");
             });
             app.Run();//Run App
         }

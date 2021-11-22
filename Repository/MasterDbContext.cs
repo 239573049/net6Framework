@@ -15,8 +15,8 @@ namespace Repository
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
-                if (typeof(ISoftDelete).IsAssignableFrom(entityType.ClrType))
-                {
+                if (typeof(ISoftDelete).IsAssignableFrom(entityType.ClrType))//判断是否继承了软删除类
+                {//软删除的操作逻辑
                     modelBuilder.Entity(entityType.ClrType).Property<bool>("IsDeleted");
                     var parameter = Expression.Parameter(entityType.ClrType, "del");
                     var body = Expression.Equal(

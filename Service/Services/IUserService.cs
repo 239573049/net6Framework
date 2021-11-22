@@ -5,6 +5,7 @@ using Repository;
 using Repository.Core;
 using Repository.Repositorys;
 using Service.Dto;
+using Util;
 
 namespace Service.Services
 {
@@ -12,6 +13,7 @@ namespace Service.Services
     {
         Task<Guid> CreateUser(UserDto user);
         Task<List<UserDto>> GetAllUsers(string name);
+        Task<UserDto> GetUserDto(string user);
     }
     public class UserService : BaseService<User>, IUserService
     {
@@ -38,6 +40,13 @@ namespace Service.Services
         {
             var data=await currentRepository.FindAll(a=>string.IsNullOrEmpty(name)||a.Name.ToLower().Contains(name.ToLower())).ToListAsync();
             return _mapper.Map<List<UserDto>>(data);
+        }
+
+        public async Task<UserDto> GetUserDto(string user)
+        {
+            var data=await currentRepository.FirstOrDefaultAsync(a=>a.AccountCode== user);
+            if (data == null) throw new BusinessLogicException("账号或者密码错误");
+            return _mapper.Map<UserDto>(data);
         }
     }
 }

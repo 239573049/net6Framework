@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Web.Code.ModelVM
 {
-    public class ModelStateResult
+    public class ModelStateResult: ActionResult
     {
         /// <summary>
         /// 状态码
@@ -20,5 +16,15 @@ namespace Web.Code.ModelVM
         /// 数据
         /// </summary>
         public object? Data { get; set; }
+
+        public ModelStateResult()
+        {
+        }
+
+        public ModelStateResult(string message, int statusCode = 400)
+        {
+            Message = message;
+            StatusCode = statusCode;
+        }
     }
 }

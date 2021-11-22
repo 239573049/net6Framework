@@ -46,3 +46,13 @@ D:\source\Web\Web\bin\Debug\net6.0\Repository.dll
 D:\source\Web\Web\bin\Debug\net6.0\Repository.pdb
 D:\source\Web\Web\bin\Debug\net6.0\Core.pdb
 D:\source\Web\Web\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\source\Web\Web\bin\Debug\net6.0\CSRedisCore.dll
+D:\source\Web\Web\bin\Debug\net6.0\MessagePack.dll
+D:\source\Web\Web\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Redis.dll
+D:\source\Web\Web\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\source\Web\Web\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\source\Web\Web\bin\Debug\net6.0\StackExchange.Redis.StrongName.dll
+D:\source\Web\Web\bin\Debug\net6.0\System.Net.WebSockets.WebSocketProtocol.dll
+D:\source\Web\Web\bin\Debug\net6.0\MessagePack.Annotations.dll
+D:\source\Web\Web\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Protocols.MessagePack.dll
+D:\source\Web\Web\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
