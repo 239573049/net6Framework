@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GhlDl+h9Zv9eIND53QEQ4JTzu+h1Ohf271CztjB6GLtB/4Bv9+/Fd0r2zih4YrQKKlUv8WG5nyrYHFWP5DJq+g==",
+  "dgSpecHash": "lBq0wfZWBepI1QyNTtUoIhQi3dkashdyOZZVSpRU4GdWLEqFLZEg5+O8TqHRbAa7R1hGiowdPc97OOoZD2OOVA==",
   "success": true,
-  "projectFilePath": "D:\\source\\Web\\Util\\Util.csproj",
+  "projectFilePath": "D:\\project\\net6Framework\\Util\\Util.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\csrediscore\\3.6.6\\csrediscore.3.6.6.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",

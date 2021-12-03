@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j3x174ibjEYAKtnBG1JLLqOWmqsJm+FvfWQ5tmMG1/AfGe7R4VbJ/9QhVdc5PiQtTYwIzqeqHZJx70VVTHx6Zw==",
+  "dgSpecHash": "PXYQN0hMx9GKeH8oA2LYDKdy//Bdd69l94GOIxtUoT1Buhxa1ud+G66j2KUbdlZkVYF43wLNlut/oYFMxRdn1w==",
   "success": true,
-  "projectFilePath": "D:\\source\\Web\\Web\\Web.csproj",
+  "projectFilePath": "D:\\project\\net6Framework\\Web\\Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\autofac\\6.3.0\\autofac.6.3.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\autofac.extensions.dependencyinjection\\7.2.0\\autofac.extensions.dependencyinjection.7.2.0.nupkg.sha512",

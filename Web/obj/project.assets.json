@@ -8014,19 +8014,19 @@
   },
   "packageFolders": {
     "C:\\Users\\Administrator\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\Web\\Web\\Web.csproj",
+      "projectUniqueName": "D:\\project\\net6Framework\\Web\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "D:\\source\\Web\\Web\\Web.csproj",
+      "projectPath": "D:\\project\\net6Framework\\Web\\Web.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\Web\\Web\\obj\\",
+      "outputPath": "D:\\project\\net6Framework\\Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8044,17 +8044,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\source\\Web\\Repository\\Repository.csproj": {
-              "projectPath": "D:\\source\\Web\\Repository\\Repository.csproj"
+            "D:\\project\\net6Framework\\Repository\\Repository.csproj": {
+              "projectPath": "D:\\project\\net6Framework\\Repository\\Repository.csproj"
             },
-            "D:\\source\\Web\\Service\\Service.csproj": {
-              "projectPath": "D:\\source\\Web\\Service\\Service.csproj"
+            "D:\\project\\net6Framework\\Service\\Service.csproj": {
+              "projectPath": "D:\\project\\net6Framework\\Service\\Service.csproj"
             },
-            "D:\\source\\Web\\Util\\Util.csproj": {
-              "projectPath": "D:\\source\\Web\\Util\\Util.csproj"
+            "D:\\project\\net6Framework\\Util\\Util.csproj": {
+              "projectPath": "D:\\project\\net6Framework\\Util\\Util.csproj"
             },
-            "D:\\source\\Web\\Web.Code\\Web.Code.csproj": {
-              "projectPath": "D:\\source\\Web\\Web.Code\\Web.Code.csproj"
+            "D:\\project\\net6Framework\\Web.Code\\Web.Code.csproj": {
+              "projectPath": "D:\\project\\net6Framework\\Web.Code\\Web.Code.csproj"
             }
           }
         }

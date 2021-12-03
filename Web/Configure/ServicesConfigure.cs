@@ -27,16 +27,11 @@ namespace Web.Configure
             services.AddSwaggerSetup("1", "Web Api", "Web API", new SwaggerSetup.Contact { Email = "239573049@qq.com", Name = "XiaoHu", Url = new Uri("https://gitee.com/hejiale010426") });
             services.AddAutoMapper(new List<Assembly> {Assembly.Load("Service"), Assembly.Load("Web.Code") });
             RedisHelper.Initialization(new CSRedis.CSRedisClient(AppSettings.App("redis")));//redis工具
-            services.AddSignalR(a =>
-            {
-                a.MaximumReceiveMessageSize = 60 * 1024 * 1024;//传输大小
-            })
-                .AddMessagePackProtocol()//启用传输协议
-                .AddRedis(AppSettings.App("redis"));
+            services.AddSignalR().AddRedis(AppSettings.App("redis"));
             services.AddEndpointsApiExplorer();
             services.AddCors(delegate (CorsOptions options)
             {
-                options.AddPolicy("CorsSetup", delegate (CorsPolicyBuilder corsBuilder)
+                options.AddPolicy("CorsPolicy", delegate (CorsPolicyBuilder corsBuilder)
                 {
                     corsBuilder.SetIsOriginAllowed((string _) => true).AllowAnyMethod().AllowAnyHeader()
                         .AllowCredentials();

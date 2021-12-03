@@ -10,3 +10,15 @@ D:\source\Web\Util\obj\Debug\net6.0\Util.dll
 D:\source\Web\Util\obj\Debug\net6.0\ref\Util.dll
 D:\source\Web\Util\obj\Debug\net6.0\Util.pdb
 D:\source\Web\Util\obj\Debug\net6.0\Util.csproj.AssemblyReference.cache
+D:\project\net6Framework\Util\bin\Debug\net6.0\Util.deps.json
+D:\project\net6Framework\Util\bin\Debug\net6.0\Util.dll
+D:\project\net6Framework\Util\bin\Debug\net6.0\ref\Util.dll
+D:\project\net6Framework\Util\bin\Debug\net6.0\Util.pdb
+D:\project\net6Framework\Util\obj\Debug\net6.0\Util.csproj.AssemblyReference.cache
+D:\project\net6Framework\Util\obj\Debug\net6.0\Util.GeneratedMSBuildEditorConfig.editorconfig
+D:\project\net6Framework\Util\obj\Debug\net6.0\Util.AssemblyInfoInputs.cache
+D:\project\net6Framework\Util\obj\Debug\net6.0\Util.AssemblyInfo.cs
+D:\project\net6Framework\Util\obj\Debug\net6.0\Util.csproj.CoreCompileInputs.cache
+D:\project\net6Framework\Util\obj\Debug\net6.0\Util.dll
+D:\project\net6Framework\Util\obj\Debug\net6.0\ref\Util.dll
+D:\project\net6Framework\Util\obj\Debug\net6.0\Util.pdb
