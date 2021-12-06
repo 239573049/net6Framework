@@ -1,14 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Service.Dto;
 using Service.Services;
+using System.ComponentModel;
 
 namespace Web.Controllers
 {
     /// <summary>
-    /// 模块
+    /// 用户模块
     /// </summary>
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Description("用户模块")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -24,6 +26,7 @@ namespace Web.Controllers
         /// <param name="user"></param>
         /// <returns></returns>
         [HttpPost]
+        [Description("添加用户")]
         public async Task<Guid> CreateUser(UserDto user)
         {
             return await _userService.CreateUser(user);
@@ -33,7 +36,8 @@ namespace Web.Controllers
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        [AcceptVerbs("GET")]
+        [HttpGet]
+        [Description("通过名称搜索用户")]
         public async Task<List<UserDto>> GetAllUsers(string name)
         {
             return await _userService.GetAllUsers(name);

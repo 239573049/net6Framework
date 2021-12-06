@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Service.Services;
+using System.ComponentModel;
 using Util;
 using Web.Code;
 using Web.Code.ModelVM;
@@ -12,6 +13,7 @@ namespace Web.Controllers
     /// </summary>
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Description("登录模块")]
     public class LoginController : WebController
     {
         private readonly IRedis _redis;
@@ -31,6 +33,7 @@ namespace Web.Controllers
         /// <param name="pass"></param>
         /// <returns></returns>
         [HttpPost]
+        [Description("登录接口")]
         public async Task<IActionResult> Login(string user,string pass)
         {
             var userData=await _userService.GetUserDto(user);
@@ -44,6 +47,7 @@ namespace Web.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpDelete]
+        [Description("退出登录")]
         public async Task<IActionResult> ExitLogin()
         {
             _ = await _redis.DeleteAsync(UserToken);
@@ -54,6 +58,7 @@ namespace Web.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPut]
+        [Description("刷新登录时间")]
         public async Task<IActionResult> Refresh()
         {
             await _redis.SetDateAsync(UserToken, DateTime.Now.AddMinutes(30));

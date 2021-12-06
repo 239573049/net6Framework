@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel;
 using Util;
 using Web.Code.ModelVM;
 
@@ -9,6 +10,7 @@ namespace Web.Configure
     /// </summary>
     [Route("api/[controller]/[action]")]
     [ApiController]
+    [Description("文件模块")]
     public class FilesController : ControllerBase
     {
         /// <summary>
@@ -19,6 +21,7 @@ namespace Web.Configure
         /// <returns></returns>
         /// <exception cref="BusinessLogicException"></exception>
         [HttpPost]
+        [Description("上传文件")]
         public async Task<IActionResult> UploadFiles(IFormFile file,sbyte type=0)
         {
             var max = Convert.ToInt64(AppSettings.App("File:max"));
@@ -52,6 +55,7 @@ namespace Web.Configure
         /// <param name="path"></param>
         /// <returns></returns>
         [HttpDelete]
+        [Description("删除文件")]
         public IActionResult DeleteFile(string path)
         {
             if (!System.IO.File.Exists(path))
@@ -67,6 +71,7 @@ namespace Web.Configure
         /// <param name="path"></param>
         /// <returns></returns>
         [HttpDelete]
+        [Description("批量删除")]
         public IActionResult DeletesFile(List<string> path)
         {
             var notExistsFile = new List<string>();
@@ -87,6 +92,7 @@ namespace Web.Configure
         /// </summary>
         /// <returns></returns>
         [HttpGet]
+        [Description("获取所有文件名称")]
         public PagingModelVM<List<string>> GetFileNames(string name,int pageNo=1,int pageSize=20)
         {
             var path = AppSettings.App("File:path");
