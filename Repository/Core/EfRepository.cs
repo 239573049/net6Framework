@@ -142,9 +142,9 @@ namespace Repository.Core
             return DbSet.FirstOrDefault(predicate);
         }
 
-        public virtual async Task<IList<TEntity>> GetAsync(Expression<Func<TEntity, bool>> predicate = null,
-            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
-            List<Expression<Func<TEntity, object>>> includes = null)
+        public virtual async Task<IList<TEntity>> GetAsync(Expression<Func<TEntity, bool>>? predicate = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
+            List<Expression<Func<TEntity, object>>>? includes = null)
         {
             IQueryable<TEntity> query = DbSet;
 

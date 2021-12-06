@@ -1,9 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Core.Base
 {
     public abstract class Entity : Entity<Guid> { }
 
+    [Index(nameof(Id))]
     public abstract class Entity<TKey>
     {
         /// <summary>

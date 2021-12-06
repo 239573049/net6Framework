@@ -1,5 +1,9 @@
 ﻿namespace Core.Base
 {
+    public interface IHaveCreated:IHaveCreatedTime
+    {
+        public Guid? CreatedBy { get; set; }
+    }
 
     public interface IHaveCreatedTime
     {

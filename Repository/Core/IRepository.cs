@@ -59,9 +59,9 @@ namespace Repository.Core
         /// <param name="orderBy"></param>
         /// <param name="includes"></param>
         /// <returns></returns>
-        Task<IList<TEntity>> GetAsync(Expression<Func<TEntity, bool>> predicate = null,
-            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>> orderBy = null,
-            List<Expression<Func<TEntity, object>>> includes = null);
+        Task<IList<TEntity>> GetAsync(Expression<Func<TEntity, bool>>? predicate = null,
+            Func<IQueryable<TEntity>, IOrderedQueryable<TEntity>>? orderBy = null,
+            List<Expression<Func<TEntity, object>>>? includes = null);
 
         /// <summary>
         /// 分页

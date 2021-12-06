@@ -4,5 +4,6 @@
     {
         public bool IsDeleted { get ; set; }
         public DateTime? DeletedTime { get; set ; }
+        public Guid? DeleteBy { get; set; }
     }
 }

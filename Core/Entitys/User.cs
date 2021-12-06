@@ -1,16 +1,21 @@
 ﻿using Core.Base;
+using Core.Entitys.Userinfo;
 
 namespace Core.Entitys
 {
     /// <summary>
     /// 用户
     /// </summary>
-    public class User: EntityWithCreation
+    public class User: EntityWithAll
     {
         /// <summary>
         /// 账号
         /// </summary>
         public string? AccountCode{ get; set; }
+        /// <summary>
+        /// 微信号
+        /// </summary>
+        public string? WechatID { get; set; }
         /// <summary>
         /// 密码
         /// </summary>
@@ -27,5 +32,25 @@ namespace Core.Entitys
         /// 头像
         /// </summary>
         public string? HeadPortrait  { get; set; }
+        /// <summary>
+        /// 权限
+        /// </summary>
+        public PowerEnum Power { get; set; }
+        /// <summary>
+        /// 冻结时间
+        /// </summary>
+        public DateTime? FreezeTime { get; set; }
+        /// <summary>
+        /// 个性签名
+        /// </summary>
+        public string? Signature { get; set; }
+        /// <summary>
+        /// 联系方式
+        /// </summary>
+        public string? ContactWay { get; set; }
+        /// <summary>
+        /// 用户余额
+        /// </summary>
+        public UserProperty? UserProperty { get; set; }
     }
 }

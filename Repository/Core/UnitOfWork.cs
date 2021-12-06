@@ -6,10 +6,11 @@ namespace Repository.Core
     public class UnitOfWork<TDbContext> : IUnitOfWork<TDbContext> where TDbContext : DbContext
     {
         private readonly TDbContext _dbContext;
-
-        public UnitOfWork(TDbContext dbContext)
+        //private readonly IPrincipalAccessor _principalAccessor;
+        public UnitOfWork(TDbContext dbContext/*,IPrincipalAccessor principalAccessor*/)
         {
             _dbContext = dbContext ?? throw new ArgumentNullException($"db context nameof{nameof(dbContext)} is null");
+            //_principalAccessor = principalAccessor;
         }
 
         public void BeginTransaction()
@@ -25,10 +26,10 @@ namespace Repository.Core
                 _dbContext.SaveChanges();
                 _dbContext.Database.CommitTransaction();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 _dbContext.Database.RollbackTransaction();
-                throw ex;
+                throw;
             }
         }
 
@@ -73,14 +74,32 @@ namespace Repository.Core
                 }
             }
         }
-
-        private void SetCreation(object entityObj)
+        private void setModified(object entityObj)
         {
-            if (entityObj is not IHaveCreatedTime)
+            if(entityObj is not IModified)
             {
                 return;
             }
-            var entity = (IHaveCreatedTime)entityObj;
+            var entity=(IModified)entityObj;
+            //var userId = _principalAccessor.GetId();
+            //if (userId != null)
+            //{
+            //    entity.ModifiedId = userId;
+            //}
+            entity.ModifiedTime = DateTime.Now;
+        }
+        private void SetCreation(object entityObj)
+        {
+            if (entityObj is not IHaveCreated)
+            {
+                return;
+            }
+            var entity = (IHaveCreated)entityObj;
+            //var userId = _principalAccessor.GetId();
+            //if (userId != null)
+            //{
+            //    entity.CreatedBy = userId;
+            //}
             entity.CreatedTime = DateTime.Now;
         }
 
@@ -95,6 +114,11 @@ namespace Repository.Core
             var entity = (ISoftDelete)entityObj;
             entity.IsDeleted = true;
             entity.DeletedTime = DateTime.Now;
+            //var userId = _principalAccessor.GetId();
+            //if (userId != null)
+            //{
+            //    entity.DeleteBy = userId;
+            //}
         }
     }
 }

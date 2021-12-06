@@ -20,7 +20,7 @@ namespace Web.Global
             _loggerHelper = loggerHelper;
         }
 
-        [DebuggerStepThrough]
+        //[DebuggerStepThrough]
         public override void OnException(ExceptionContext context)
         {
             if (context.ExceptionHandled == false)
@@ -34,7 +34,7 @@ namespace Web.Global
                 context.Result = new ContentResult
                 {
                     Content = JsonConvert.SerializeObject(response),
-                    StatusCode=500,
+                    StatusCode=200,
                     ContentType="application/json;charset=utf-8"
                 };
             }

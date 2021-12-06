@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Core.Base
+﻿namespace Core.Base
 {
     public interface ISoftDelete: IHaveDeleteTime
     {
@@ -14,5 +8,6 @@ namespace Core.Base
     public interface IHaveDeleteTime
     {
         DateTime? DeletedTime { get; set; }
+        Guid? DeleteBy{ get; set; }
     }
 }

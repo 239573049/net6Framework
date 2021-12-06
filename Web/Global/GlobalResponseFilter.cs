@@ -5,8 +5,15 @@ using Web.Code.ModelVM;
 
 namespace Web.Global
 {
+    /// <summary>
+    /// 全局返回拦截
+    /// </summary>
     public class GlobalResponseFilter : ActionFilterAttribute
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="context"></param>
         [DebuggerStepThrough]
         public override void OnActionExecuted(ActionExecutedContext context)
         {

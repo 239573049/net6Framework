@@ -1,4 +1,6 @@
-﻿using Web.Code.ModelVM;
+﻿using Microsoft.AspNetCore.Mvc;
+using Util;
+using Web.Code.ModelVM;
 
 namespace Web.Configure
 {
@@ -13,27 +15,33 @@ namespace Web.Configure
         /// 上传文件
         /// </summary>
         /// <param name="file"></param>
+        /// <param name="type">0(文件)|1（图片）|2（视频）默认文件</param>
         /// <returns></returns>
+        /// <exception cref="BusinessLogicException"></exception>
         [HttpPost]
-        public IActionResult UploadFiles(IFormFile file)
+        public async Task<IActionResult> UploadFiles(IFormFile file,sbyte type=0)
         {
             var max = Convert.ToInt64(AppSettings.App("File:max"));
             if (file.Length > max*1024*1024)throw new BusinessLogicException($"文件大于{max}MB无法上传");
             var path = AppSettings.App("File:path");
-            if (!Directory.Exists(path))
+            if (type!= 0)
             {
-                Directory.CreateDirectory(path);
+                path += type == 1 ? "/images" : "/mp4";
+            }
+            if (!Directory.Exists("." + path))
+            {
+                Directory.CreateDirectory("." + path);
             }
             var bytes = new byte[file.OpenReadStream().Length];
             file.OpenReadStream().Read(bytes, 0, bytes.Length);
             file.OpenReadStream().Close();
             var names=file.FileName.Split(".");
-            var name=$"{DateTime.Now:yyyyMMddHHmmfffffff}";
+            var name=await StringUtil.GetStringAsync(20);
             if(name.Length > 1)
             {
                 name +="."+names[^1];
             }
-            var files = System.IO.File.Create(path + "/" + name);
+            var files = System.IO.File.Create("." + path + "/" + name);
             files.Write(bytes);
             files.Close();
             return new OkObjectResult(path + "/" + name);
@@ -82,10 +90,10 @@ namespace Web.Configure
         public PagingModelVM<List<string>> GetFileNames(string name,int pageNo=1,int pageSize=20)
         {
             var path = AppSettings.App("File:path");
-            var data= Directory.GetFiles(path).Where(a=>string.IsNullOrEmpty(name)||a.ToLower().Contains(name.ToLower()))
+            var data= Directory.GetFiles("."+path).Where(a=>string.IsNullOrEmpty(name)||a.ToLower().Contains(name.ToLower()))
                 .Skip((pageNo - 1) * pageSize).Take(pageSize)
                     .ToList();
-            var count= Directory.GetFiles(path).Length;
+            var count= Directory.GetFiles("." + path).Length;
             return new PagingModelVM<List<string>>(data, count);
         }
     }

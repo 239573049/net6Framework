@@ -12,13 +12,13 @@
         {
         }
 
-        public BusinessLogicException(string message, Exception innerException = null)
+        public BusinessLogicException(string message, Exception? innerException = null)
             : base(message, innerException)
         {
             Code = 400;
         }
 
-        public BusinessLogicException(int code, string message, Exception innerException = null)
+        public BusinessLogicException(int code, string message, Exception? innerException = null)
             : base(message, innerException)
         {
             Code = code;

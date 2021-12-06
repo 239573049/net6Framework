@@ -1,4 +1,7 @@
-﻿namespace Util
+﻿using System;
+using System.Threading.Tasks;
+
+namespace Util
 {
     public interface IRedis
     {

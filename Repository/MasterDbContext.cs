@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace Repository
 {
-    public class MasterDbContext:DbContext
+    public class MasterDbContext : DbContext
     {
         public MasterDbContext(DbContextOptions<MasterDbContext> options) : base(options) { }
 
@@ -27,4 +27,5 @@ namespace Repository
             }
         }
     }
+
 }

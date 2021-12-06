@@ -3,29 +3,50 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Web.Configure
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public static class SwaggerSetup
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public class Contact
         {
+            /// <summary>
+            /// 
+            /// </summary>
             public string? Name
             {
                 get;
                 set;
             }
-
+            /// <summary>
+            /// 
+            /// </summary>
             public string? Email
             {
                 get;
                 set;
             }
-
+            /// <summary>
+            /// 
+            /// </summary>
             public Uri? Url
             {
                 get;
                 set;
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="service"></param>
+        /// <param name="version"></param>
+        /// <param name="title"></param>
+        /// <param name="Description"></param>
+        /// <param name="contact"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public static void AddSwaggerSetup(this IServiceCollection service, string version, string title, string Description, Contact contact)
         {
             if (service == null)

@@ -1,0 +1,375 @@
+﻿++解决方案“Web”‎(6 个项目，共 6 个)
+i:{00000000-0000-0000-0000-000000000000}:Web.sln
+++Web.Code
+i:{00000000-0000-0000-0000-000000000000}:Web.Code
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web.code\web.code.csproj
+++依赖项
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:>1220
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:>1222
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:>1224
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:>1223
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1666
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:>1221
+++包
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:包
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:包
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:包
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:包
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:包
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:包
+++AutoMapper.Extensions.Microsoft.DependencyInjection (8.1.1)
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:>1688
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:>1717
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1737
+++Microsoft.AspNetCore.Cors (2.2.0)
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:>1690
+++Microsoft.AspNetCore.Mvc.Core (2.2.5)
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:>1691
+++Microsoft.AspNetCore.SignalR (1.1.0)
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:>1692
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1744
+++Microsoft.Extensions.DependencyInjection.Abstractions (6.0.0)
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:>1689
+++分析器
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:分析器
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:分析器
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:分析器
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:分析器
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:分析器
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:分析器
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\users\administrator\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.10\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:c:\users\administrator\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.10\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:c:\users\administrator\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.10\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:c:\users\administrator\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.10\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:c:\users\administrator\.nuget\packages\microsoft.entityframeworkcore.analyzers\5.0.10\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++System.Text.Json.SourceGeneration
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:c:\users\administrator\.nuget\packages\system.text.json\6.0.0\analyzers\dotnet\roslyn4.0\cs\system.text.json.sourcegeneration.dll
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.0\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++框架
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:框架
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:框架
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:框架
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:框架
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:框架
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:框架
+++Microsoft.NETCore.App
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:d:\project\net6framework\util\microsoft.netcore.app
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:d:\project\net6framework\service\microsoft.netcore.app
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\microsoft.netcore.app
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\microsoft.netcore.app
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\microsoft.netcore.app
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:d:\project\net6framework\web.code\microsoft.netcore.app
+++项目
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:项目
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:项目
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:项目
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:项目
+++Service
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:d:\project\net6framework\service\service.csproj
+i:{00000000-0000-0000-0000-000000000000}:Service
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\service\service.csproj
+++Util
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:d:\project\net6framework\util\util.csproj
+i:{00000000-0000-0000-0000-000000000000}:Util
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:d:\project\net6framework\util\util.csproj
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\util\util.csproj
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\util\util.csproj
+++ChatHubs
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:d:\project\net6framework\web.code\chathubs\
+++ChatHub.cs
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:d:\project\net6framework\web.code\chathubs\chathub.cs
+++ModelVM
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:d:\project\net6framework\web.code\modelvm\
+++ModelStateResult.cs
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:d:\project\net6framework\web.code\modelvm\modelstateresult.cs
+++PagingModelVM.cs
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:d:\project\net6framework\web.code\modelvm\pagingmodelvm.cs
+++AuthorizationAttribute.cs
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:d:\project\net6framework\web.code\authorizationattribute.cs
+++WebController.cs
+i:{5e2a5e6c-243f-4003-83f5-2dcaf71648b4}:d:\project\net6framework\web.code\webcontroller.cs
+++CSRedisCore (3.6.6)
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:>1703
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1740
+++Microsoft.AspNetCore.Http.Abstractions (2.2.0)
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:>1705
+++Microsoft.Extensions.Configuration.Abstractions (6.0.0)
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:>1702
+++Microsoft.Extensions.Configuration.Json (6.0.0)
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:>1704
+++AppSettings.cs
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:d:\project\net6framework\util\appsettings.cs
+++BusinessLogicException.cs
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:d:\project\net6framework\util\businesslogicexception.cs
+++IPrincipalAccessor.cs
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\global\iprincipalaccessor.cs
+++IRedis.cs
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:d:\project\net6framework\util\iredis.cs
+++StringUtil.cs
+i:{4530ee7c-bc80-4bc7-98c3-f2cc62623d40}:d:\project\net6framework\util\stringutil.cs
+++Core
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:d:\project\net6framework\core\core.csproj
+i:{00000000-0000-0000-0000-000000000000}:Core
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\core\core.csproj
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\core\
+++Repository
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:d:\project\net6framework\repository\repository.csproj
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\repository\repository.csproj
+i:{00000000-0000-0000-0000-000000000000}:Repository
+++Dto
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:d:\project\net6framework\service\dto\
+++UserDto.cs
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:d:\project\net6framework\service\dto\userdto.cs
+++Services
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:d:\project\net6framework\service\services\
+++IUserService.cs
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:d:\project\net6framework\service\services\iuserservice.cs
+++IBaseService.cs
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:d:\project\net6framework\service\ibaseservice.cs
+++IDataService.cs
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:d:\project\net6framework\service\idataservice.cs
+++MapperProfile.cs
+i:{e0c1ac62-9c43-4971-b926-616ef976b6ce}:d:\project\net6framework\service\mapperprofile.cs
+++Pomelo.EntityFrameworkCore.MySql (6.0.0)
+++Base
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\base\
+++Entity.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\base\entity.cs
+++EntityWithAll.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\base\entitywithall.cs
+++EntityWithCreation.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\base\entitywithcreation.cs
+++EntityWithSoftDelete.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\base\entitywithsoftdelete.cs
+++IHaveCreation.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\base\ihavecreation.cs
+++IModified.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\base\imodified.cs
+++ISoftDelete.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\base\isoftdelete.cs
+++Entitys
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\
+++OrderForms
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\orderforms\
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\configurations\orderforms\
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\orderforms\
+++AccessNumberForm.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\orderforms\accessnumberform.cs
+++AppealFaileds.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\orderforms\appealfaileds.cs
+++Collects.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\orderforms\collects.cs
+++FormType.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\orderforms\formtype.cs
+++UserForms.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\orderforms\userforms.cs
+++Userinfo
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\userinfo\
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\configurations\userinfo\
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\userinfo\
+++FreezeDetail.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\userinfo\freezedetail.cs
+++UserProperty.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\userinfo\userproperty.cs
+++DbEnums.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\dbenums.cs
+++User.cs
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:d:\project\net6framework\core\entitys\user.cs
+++Solution Items
+i:{00000000-0000-0000-0000-000000000000}:Solution Items
+++Web
+i:{00000000-0000-0000-0000-000000000000}:Web
+++Connected Services 
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1667
+++未发现任何服务依赖项
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1668
+++Properties
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\properties\
+++PublishProfiles
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\properties\publishprofiles\
+++FolderProfile.pubxml
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\properties\publishprofiles\folderprofile.pubxml
+++launchSettings.json
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\properties\launchsettings.json
+++wwwroot
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\wwwroot\
+++file
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\wwwroot\file\
+++images
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\wwwroot\file\images\
+++mp4
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\wwwroot\file\mp4\
+++Autofac (6.3.0)
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1745
+++Autofac.Extensions.DependencyInjection (7.2.0)
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1736
+++Microsoft.AspNetCore.SignalR.Protocols.MessagePack (6.0.0)
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1741
+++Microsoft.AspNetCore.SignalR.Redis (1.1.5)
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1735
+++Microsoft.EntityFrameworkCore (6.0.0)
+++Microsoft.EntityFrameworkCore.Design (6.0.0)
+++Microsoft.EntityFrameworkCore.Tools (6.0.0)
+++Newtonsoft.Json (13.0.1)
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1739
+++Swashbuckle.AspNetCore (6.2.3)
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>1738
+++Microsoft.AspNetCore.Analyzers
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.analyzers.dll
+++Microsoft.AspNetCore.App.Analyzers
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.analyzers.dll
+++Microsoft.AspNetCore.App.CodeFixes
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.0\analyzers\dotnet\cs\microsoft.aspnetcore.app.codefixes.dll
+++Microsoft.AspNetCore.Components.Analyzers
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.components.analyzers.dll
+++Microsoft.AspNetCore.Mvc.Analyzers
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.web\analyzers\cs\microsoft.aspnetcore.mvc.analyzers.dll
+++Microsoft.AspNetCore.Razor.Internal.SourceGenerator.Transport
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.aspnetcore.razor.internal.sourcegenerator.transport.dll
+++Microsoft.NET.Sdk.Razor.SourceGenerators
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:c:\program files\dotnet\sdk\6.0.100\sdks\microsoft.net.sdk.razor\source-generators\microsoft.net.sdk.razor.sourcegenerators.dll
+++Microsoft.AspNetCore.App
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\microsoft.aspnetcore.app
+++Configure
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\configure\
+++AppConfigure.cs
+++ContainerConfigure.cs
+++ServicesConfigure.cs
+++SwaggerSetup.cs
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\configure\swaggersetup.cs
+++Controllers
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\controllers\
+++FilesController.cs
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\controllers\filescontroller.cs
+++LoginController.cs
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\controllers\logincontroller.cs
+++ServiceController.cs
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\controllers\servicecontroller.cs
+++UserController.cs
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\controllers\usercontroller.cs
+++Global
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\global\
+++GlobalExceptionsFilter.cs
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\global\globalexceptionsfilter.cs
+++GlobalModelStateValidationFilter.cs
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\global\globalmodelstatevalidationfilter.cs
+++GlobalResponseFilter.cs
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\global\globalresponsefilter.cs
+++.editorconfig
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\.editorconfig
+++appsettings.json
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\appsettings.json
+++GlobalUsing.cs
+++Program.cs
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\program.cs
+++EntityFramework (6.4.4)
+++Configurations
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\configurations\
+++AccessNumberFormConfiguration.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\configurations\orderforms\accessnumberformconfiguration.cs
+++AppealFailedsConfiguration.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\configurations\orderforms\appealfailedsconfiguration.cs
+++CollectsConfiguration.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\configurations\orderforms\collectsconfiguration.cs
+++FormTypeConfiguration.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\configurations\orderforms\formtypeconfiguration.cs
+++UserFormsConfiguration.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\configurations\orderforms\userformsconfiguration.cs
+++FreezeDetailConfigration.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\configurations\userinfo\freezedetailconfigration.cs
+++UserPropertyConfiguration.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\configurations\userinfo\userpropertyconfiguration.cs
+++UserConfiguration.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\configurations\userconfiguration.cs
+++EfRepository.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\core\efrepository.cs
+++IRepository.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\core\irepository.cs
+++IUnitOfWork.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\core\iunitofwork.cs
+++UnitOfWork.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\core\unitofwork.cs
+++Repositorys
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\
+++IAccessNumberFormRepository.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\orderforms\iaccessnumberformrepository.cs
+++IAppealFailedsRepository.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\orderforms\iappealfailedsrepository.cs
+++ICollectsRepository.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\orderforms\icollectsrepository.cs
+++IFormTypeRepository.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\orderforms\iformtyperepository.cs
+++IUserFormsRepository.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\orderforms\iuserformsrepository.cs
+++IFreezeDetailRepository.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\userinfo\ifreezedetailrepository.cs
+++IUserPropertyRepository.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\userinfo\iuserpropertyrepository.cs
+++IMasterDbRepositoryBase.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\imasterdbrepositorybase.cs
+++IUserRepository.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\iuserrepository.cs
+++MasterDbRepositoryBase.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\repositorys\masterdbrepositorybase.cs
+++EntityConfiguration.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\entityconfiguration.cs
+++MasterDbContext.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\masterdbcontext.cs
+++MasterSlaveDbInterceptor.cs
+++MasterSlaveManager.cs
+++Microsoft.EntityFrameworkCore.Proxies (6.0.0)
+++Startup.cs
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:d:\project\net6framework\web\startup.cs
+++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll
+++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk\targets\..\analyzers\Microsoft.CodeAnalysis.NetAnalyzers.dll
+++Pomelo.EntityFrameworkCore.MySql (5.0.3)
+i:{5ce7b8c4-96a5-4a78-9ee6-aa6e28932c06}:>1944
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:>2213
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>2214
+++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Analyzers.dll
+++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Components.Analyzers.dll
+++C:\Program Files\dotnet\sdk\6.0.100\Sdks\Microsoft.NET.Sdk.Web\analyzers\cs\Microsoft.AspNetCore.Mvc.Analyzers.dll
+++EntityFramework (5.0.0)
+++Microsoft.EntityFrameworkCore (5.0.12)
+++Microsoft.EntityFrameworkCore.Tools (5.0.12)
+++Startup.cs~RFdfff71e.TMP
+++Migrations
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\migrations\
+++20211203193836_t1.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\migrations\20211203193836_t1.cs
+++MasterDbContextModelSnapshot.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\migrations\masterdbcontextmodelsnapshot.cs
+++20211203193836_t1.Designer.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\migrations\20211203193836_t1.designer.cs
+++MasterSlaveManager.cs~RFe0480cc.TMP
+++MasterSlaveDbInterceptor.cs~RFfbe0d7b.TMP
+++Microsoft.EntityFrameworkCore.Tools (5.0.3)
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:>3153
+i:{8acbba52-7d57-47d5-9c29-1046d13dabb0}:>3154
+++20211204035725_t2.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\migrations\20211204035725_t2.cs
+++20211204035725_t2.Designer.cs
+i:{d5b602e2-271e-42c0-b56f-cd96bf98fe09}:d:\project\net6framework\repository\migrations\20211204035725_t2.designer.cs
+++MasterSlaveDbInterceptor.cs~RFfd42daa.TMP
+++MasterDbContext.cs~RFfdcf3f1.TMP
