@@ -25,7 +25,7 @@ namespace Web.Code
             if (userDto == null) throw new BusinessLogicException(401, "请先登录账号");
             if (_power != null)
             {
-                if ((sbyte)userDto.Status>(sbyte)_power)
+                if ((sbyte)userDto.Power>(sbyte)_power)
                 {
                     throw new BusinessLogicException(403, $"您没有权限访问{path}接口！");
                 }
