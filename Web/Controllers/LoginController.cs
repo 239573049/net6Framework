@@ -50,7 +50,8 @@ namespace Web.Controllers
         [Description("退出登录")]
         public async Task<IActionResult> ExitLogin()
         {
-            _ = await _redis.DeleteAsync(UserToken);
+            var res = await _redis.DeleteAsync(UserToken);
+            if (!res) return new ModelStateResult("退出失败", 400);
             return new OkObjectResult("退出成功");
         }
         /// <summary>
@@ -61,7 +62,8 @@ namespace Web.Controllers
         [Description("刷新登录时间")]
         public async Task<IActionResult> Refresh()
         {
-            await _redis.SetDateAsync(UserToken, DateTime.Now.AddMinutes(30));
+            var res = await _redis.SetDateAsync(UserToken, DateTime.Now.AddMinutes(30));
+            if (!res) return new ModelStateResult("刷新登陆时间失败", 400);
             return new OkObjectResult("刷新成功");
         }
     }
