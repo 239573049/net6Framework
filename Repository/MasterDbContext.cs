@@ -8,7 +8,10 @@ namespace Repository
     public class MasterDbContext : DbContext
     {
         public MasterDbContext(DbContextOptions<MasterDbContext> options) : base(options) { }
-
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.AddInterceptors(new TaggedQueryCommandInterceptor());
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

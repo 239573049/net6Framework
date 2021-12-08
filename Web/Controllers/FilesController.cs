@@ -58,11 +58,11 @@ namespace Web.Configure
         [Description("删除文件")]
         public IActionResult DeleteFile(string path)
         {
-            if (!System.IO.File.Exists(path))
+            if (!System.IO.File.Exists("." + path))
             {
                 return new ModelStateResult("文件不存在");
             }
-            System.IO.File.Delete(path);
+            System.IO.File.Delete("." + path);
             return new OkObjectResult("删除成功");
         }
         /// <summary>
@@ -77,9 +77,9 @@ namespace Web.Configure
             var notExistsFile = new List<string>();
             foreach (var file in path)
             {
-                if (!System.IO.File.Exists(file))
+                if (!System.IO.File.Exists("." + file))
                 {
-                    notExistsFile.Add(file);
+                    notExistsFile.Add("." + file);
                 }
             }
             path= path.Where(a=>!notExistsFile.Contains(a)).ToList();

@@ -11,7 +11,7 @@ namespace Service.Services
         /// </summary>
         /// <param name="ip"></param>
         /// <returns></returns>
-        Task<List<PathTree>> GetPathAll();
+        List<PathTree> GetPathAll();
     }
     public class RouteReflectionService : IRouteReflectionService
     {
@@ -19,7 +19,7 @@ namespace Service.Services
             )
         { 
         }
-        public async Task<List<PathTree>> GetPathAll()
+        public List<PathTree> GetPathAll()
         {
             var result = new List<PathTree>();
             var basePath = AppDomain.CurrentDomain.BaseDirectory;
@@ -34,49 +34,26 @@ namespace Service.Services
                     Description = d.GetCustomAttribute<DescriptionAttribute>()?.Description,
                     Path = "/api/" + d.Name
                 };
-                try
+                if (string.IsNullOrEmpty(pathTree.Description)) continue;
+                var classData = d.GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public).Select(a => new PathTree
                 {
-                    ///过滤继承类的方法
-                    var classData = d.GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public).Select(a=>new PathTree
-                    {
-                        Name=a.Name,
-                        Path= "/api/" + name + "/" + a.Name,
-                        Description= a.GetCustomAttribute<DescriptionAttribute>()?.Description,
-                        parentId = name
-                    }).ToList();
-                    pathTree.Children.AddRange(classData);
-                    result.Add(pathTree);
-                }
-                catch (Exception)
-                {
-                }
+                    Name = a.Name,
+                    Path = "/api/" + name + "/" + a.Name,
+                    Description = a.GetCustomAttribute<DescriptionAttribute>()?.Description,
+                    ParentId = name
+                }).ToList();
+                pathTree.Children.AddRange(classData);
+                result.Add(pathTree);
             }
             return result;
         }
     }
-    public class Swagger
-    {
-        public JObject Paths { get; set; }
-        public List<Tags> Tags { get; set; } = new List<Tags>();
-    }
-    public class Tags
-    {
-        /// <summary>
-        /// 名称
-        /// </summary>
-        public string? Name { get; set; }
-        /// <summary>
-        /// 注释
-        /// </summary>
-        public string? Description { get; set; }
-    }
-
     public class PathTree
     {
         public string? Name { get; set; }
         public string? Description { get; set; }
         public string? Path { get; set; }
-        public string? parentId { get; set; }
+        public string? ParentId { get; set; }
         public List<PathTree> Children { get; set; } = new List<PathTree>();
     }
 }

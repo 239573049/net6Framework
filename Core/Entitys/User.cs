@@ -1,5 +1,4 @@
 ﻿using Core.Base;
-using Core.Entitys.Userinfo;
 
 namespace Core.Entitys
 {
@@ -12,10 +11,6 @@ namespace Core.Entitys
         /// 账号
         /// </summary>
         public string? AccountCode{ get; set; }
-        /// <summary>
-        /// 微信号
-        /// </summary>
-        public string? WechatID { get; set; }
         /// <summary>
         /// 密码
         /// </summary>
@@ -48,9 +43,5 @@ namespace Core.Entitys
         /// 联系方式
         /// </summary>
         public string? ContactWay { get; set; }
-        /// <summary>
-        /// 用户余额
-        /// </summary>
-        public UserProperty? UserProperty { get; set; }
     }
 }

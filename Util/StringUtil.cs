@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace Util
+﻿namespace Util
 {
     public class StringUtil
     {

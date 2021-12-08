@@ -26,9 +26,9 @@ namespace Web.Controllers
         /// <returns></returns>
         [HttpGet]
         [Description("获取全部接口树形和注释")]
-        public async Task<List<PathTree>> GetPathAll()
+        public List<PathTree> GetPathAll()
         {
-            return await _routeReflectionService.GetPathAll();
+            return _routeReflectionService.GetPathAll();
         }
     }
 }

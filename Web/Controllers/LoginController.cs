@@ -38,7 +38,7 @@ namespace Web.Controllers
         {
             var userData=await _userService.GetUserDto(user);
             if (userData.Password != pass) return new ModelStateResult("账号或者密码错误", 400);
-            var token = Guid.NewGuid().ToString()+Guid.NewGuid();
+            var token = StringUtil.GetString(130) ;
             await _redis.SetAsync(token,userData, DateTime.Now.AddMinutes(30));
             return new OkObjectResult(new { user= userData,token});
         }
