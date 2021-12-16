@@ -1,7 +1,7 @@
 ﻿using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Web.Configure
+namespace Web.Global
 {
     /// <summary>
     /// 

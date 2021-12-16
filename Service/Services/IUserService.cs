@@ -13,7 +13,7 @@ namespace Service.Services
     {
         Task<Guid> CreateUser(UserDto user);
         Task<List<UserDto>> GetAllUsers(string name);
-        Task<UserDto> GetUserDto(string user);
+        Task<UserDto> GetUserDto(string user, string pass);
     }
     public class UserService : BaseService<User>, IUserService
     {
@@ -42,10 +42,11 @@ namespace Service.Services
             return _mapper.Map<List<UserDto>>(data);
         }
 
-        public async Task<UserDto> GetUserDto(string user)
+        public async Task<UserDto> GetUserDto(string user, string pass)
         {
-            var data=await currentRepository.FirstOrDefaultAsync(a=>a.AccountCode== user);
+            var data=await currentRepository.FindAll(a=>a.AccountCode== user&&a.Password== pass).Include(a=>a.UserRole!.Role!.RoleFunctions).FirstOrDefaultAsync();
             if (data == null) throw new BusinessLogicException("账号或者密码错误");
+            var userData = _mapper.Map<UserDto>(data);
             return _mapper.Map<UserDto>(data);
         }
     }

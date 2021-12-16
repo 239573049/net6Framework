@@ -1,4 +1,5 @@
 ﻿using Core.Base;
+using Core.Entitys.Roles;
 
 namespace Core.Entitys
 {
@@ -43,5 +44,6 @@ namespace Core.Entitys
         /// 联系方式
         /// </summary>
         public string? ContactWay { get; set; }
+        public UserRole? UserRole { get; set; }
     }
 }

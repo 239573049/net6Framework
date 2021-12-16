@@ -1,7 +1,10 @@
 ﻿global using Microsoft.EntityFrameworkCore;
 using Core.Base;
+using Core.Entitys;
+using Core.Entitys.Roles;
 using System.Linq.Expressions;
 using System.Reflection;
+using Util;
 
 namespace Repository
 {
@@ -28,6 +31,49 @@ namespace Repository
                     modelBuilder.Entity(entityType.ClrType).HasQueryFilter(Expression.Lambda(body, parameter));
                 }
             }
+            #region 数据库默认参数
+            var adminId = Guid.NewGuid();
+                        var roleId= Guid.NewGuid();
+                        modelBuilder.Entity<User>()
+                            .HasData(new User {Id= adminId, AccountCode="admin",Password="Aa123456".MD5Encrypt(),HeadPortrait= "https://ts1.cn.mm.bing.net/th?id=OIP-C.79smi7hB-2AHPbroJr8rnwAAAA&w=204&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2",ContactWay="239573049@qq.com",IsDeleted=false,Name="管理员"});
+                        modelBuilder.Entity<Role>()
+                            .HasData(new Role { Id = roleId, Code = "admin", Name = "管理员", Index = 0, Remark = "超级牛皮的权限管理员", IsDeleted = false });
+                        modelBuilder.Entity<UserRole>()
+                            .HasData(new UserRole { Id = Guid.NewGuid(),RoleId= roleId, UserId=adminId });
+                        var roleFunctions = new List<RoleFunction>();
+                        var i = 0;
+                        foreach (var d in RouteReflection.GetPathAll())
+                        {
+                            var roleFunction=new RoleFunction()
+                            {
+                                Id=Guid.NewGuid(),
+                                Index= i++,
+                                ParentId=null,
+                                Title=d.Description,
+                                RoleId=roleId,
+                                Route=d.Path,
+                                IsDeleted=false
+                            };
+                            var s = 0;
+                            foreach (var a in d.Children)
+                            {
+                                var children = new RoleFunction()
+                                {
+                                    Id = Guid.NewGuid(),
+                                    Index = s++,
+                                    ParentId = roleFunction.Id,
+                                    Title = d.Description,
+                                    RoleId = roleId,
+                                    Route = a.Path,
+                                    IsDeleted = false
+                                };
+                                roleFunctions.Add(children);
+                            }
+                            roleFunctions.Add(roleFunction);
+                        }
+                        modelBuilder.Entity<RoleFunction>().HasData(roleFunctions);
+            #endregion
+            
         }
     }
 

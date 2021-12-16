@@ -1,4 +1,5 @@
 ﻿using Core.Entitys;
+using Service.Dto.Roles;
 
 namespace Service.Dto
 {
@@ -26,10 +27,6 @@ namespace Service.Dto
         /// </summary>
         public string? HeadPortrait { get; set; }
         /// <summary>
-        /// 权限
-        /// </summary>
-        public PowerEnum Power { get; set; }
-        /// <summary>
         /// 冻结时间
         /// </summary>
         public DateTime? FreezeTime { get; set; }
@@ -41,5 +38,7 @@ namespace Service.Dto
         /// 联系方式
         /// </summary>
         public string? ContactWay { get; set; }
+        public List<RoleFunctionDto> RoleFunctions { get; set; } = new List<RoleFunctionDto>();
+
     }
 }

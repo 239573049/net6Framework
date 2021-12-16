@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Service.Services;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel;
+using Util;
+using Web.Code;
 
 namespace Web.Controllers
 {
@@ -11,14 +11,12 @@ namespace Web.Controllers
     [Route("api/[controller]/[action]")]
     [ApiController]
     [Description("获取所有接口")]
+    [Authorization]
     public class GetController : ControllerBase
     {
-        private readonly IRouteReflectionService _routeReflectionService;
         public GetController(
-            IRouteReflectionService routeReflectionService
             )
         {
-            _routeReflectionService = routeReflectionService;
         }
         /// <summary>
         /// 获取全部接口树形和注释
@@ -28,7 +26,7 @@ namespace Web.Controllers
         [Description("获取全部接口树形和注释")]
         public List<PathTree> GetPathAll()
         {
-            return _routeReflectionService.GetPathAll();
+            return RouteReflection.GetPathAll();
         }
     }
 }

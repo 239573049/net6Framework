@@ -1,21 +1,24 @@
-﻿using Core.Entitys;
-using Microsoft.AspNetCore.Mvc.Filters;
+﻿using Microsoft.AspNetCore.Mvc.Filters;
 using Service.Dto;
+using System.Diagnostics;
 using Util;
 
 namespace Web.Code
 {
+    /// <summary>
+    /// 只有配置这个注解才会验证路由权限
+    /// 不使用注解就相当于都可以访问不做权限处理
+    /// </summary>
     public class AuthorizationAttribute : ActionFilterAttribute
     {
-        private PowerEnum? _power;
-        public AuthorizationAttribute(PowerEnum? power)
+        public AuthorizationAttribute()
         {
-            _power = power;
         }
         /// <summary>
         /// 权限拦截
         /// </summary>
         /// <param name="httpContext"></param>
+        [DebuggerStepThrough]//调试不进入
         public override void OnActionExecuting(ActionExecutingContext httpContext)
         {
             string authorization = httpContext.HttpContext.Request.Headers["Authorization"].ToString();
@@ -23,13 +26,8 @@ namespace Web.Code
             var path = httpContext.HttpContext.Request.Path.Value;
             var userDto = new Redis().Get<UserDto>(authorization);
             if (userDto == null) throw new BusinessLogicException(401, "请先登录账号");
-            if (_power != null)
-            {
-                if ((sbyte)userDto.Power>(sbyte)_power)
-                {
-                    throw new BusinessLogicException(403, $"您没有权限访问{path}接口！");
-                }
-            }
+            if (userDto.RoleFunctions.Any(a => path!.Contains(a!.Route!))) return;//存在就跳出
+            throw new BusinessLogicException(403,"权限不足");
         }
 
     }

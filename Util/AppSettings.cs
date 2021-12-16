@@ -10,13 +10,6 @@ namespace Util
             get;
             set;
         }
-
-        private static string? ContentPath
-        {
-            get;
-            set;
-        }
-
         public AppSettings(string contentPath, string path = "appsettings.json")
         {
             Configuration = new ConfigurationBuilder().SetBasePath(contentPath).Add(new JsonConfigurationSource
@@ -27,7 +20,7 @@ namespace Util
             }).Build();
         }
 
-        public static string? App(params string[] sections)
+        public static string App(params string[] sections)
         {
             try
             {

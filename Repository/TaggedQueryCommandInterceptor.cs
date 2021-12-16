@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
+    /// <summary>
+    /// 可以在这里实现读写分离
+    /// </summary>
     public class TaggedQueryCommandInterceptor: DbCommandInterceptor
     {
         public override InterceptionResult<object> ScalarExecuting(DbCommand command, CommandEventData eventData, InterceptionResult<object> result)
