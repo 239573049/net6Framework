@@ -38,6 +38,7 @@ namespace Web.Controllers
             var userData=await _userService.GetUserDto(user, pass);
             var token = StringUtil.GetString(130) ;
             await _redis.SetAsync(token,userData, DateTime.Now.AddMinutes(30));
+            userData.RoleFunctions.Clear(); //看需求是否清空
             return new OkObjectResult(new { user= userData,token});
         }
         /// <summary>

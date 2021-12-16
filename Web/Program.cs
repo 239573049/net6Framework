@@ -44,6 +44,7 @@ services.AddControllers(o =>
     o.Filters.Add(typeof(GlobalModelStateValidationFilter));
 });
 #endregion
+
 #region 依赖注入
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());//覆盖用于创建服务提供者的工厂
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>//依赖注入

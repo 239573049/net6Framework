@@ -31,6 +31,7 @@ namespace Repository
                     modelBuilder.Entity(entityType.ClrType).HasQueryFilter(Expression.Lambda(body, parameter));
                 }
             }
+
             #region 数据库默认参数
             var adminId = Guid.NewGuid();
                         var roleId= Guid.NewGuid();
