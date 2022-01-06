@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Core.Entitys;
 using Core.Entitys.Roles;
+using MongoDBCore.Entitys.Chat;
 using Service.Dto;
 using Service.Dto.Roles;
 
@@ -19,6 +20,7 @@ namespace Service
             CreateMap<RoleDto, Role>();
             CreateMap<RoleFunction, RoleFunctionDto>();
             CreateMap<RoleFunctionDto, RoleFunction>();
+            CreateMap<LogDto, Log>().ReverseMap();
         }
     }
 }

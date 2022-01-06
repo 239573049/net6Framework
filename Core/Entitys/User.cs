@@ -29,10 +29,6 @@ namespace Core.Entitys
         /// </summary>
         public string? HeadPortrait  { get; set; }
         /// <summary>
-        /// 权限
-        /// </summary>
-        public PowerEnum Power { get; set; }
-        /// <summary>
         /// 冻结时间
         /// </summary>
         public DateTime? FreezeTime { get; set; }

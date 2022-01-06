@@ -2,6 +2,7 @@ using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using MongoDBRepository.Repositorys;
 using Repository;
 using Repository.Core;
 using Repository.Repositorys;
@@ -19,8 +20,7 @@ services.AddSingleton(new AppSettings(builder.Environment.ContentRootPath));
 services.AddSingleton<IRedis, Redis>();//Ioc控制反转
 services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 services.AddSingleton<IPrincipalAccessor, PrincipalAccessor>();
-services.AddDbContext<MasterDbContext>(option => option.UseSqlServer(AppSettings.App("sqlservice")));
-//services.AddDbContext<MasterDbContext>(option => option.UseMySql(AppSettings.App("mysql"), new MySqlServerVersion(new Version(5, 0, 26))));
+services.AddDbContext<MasterDbContext>(option => option.UseMySql(AppSettings.App("mysql"), new MySqlServerVersion(new Version(5, 0, 26))));
 services.AddTransient(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
 services.AddTransient(typeof(IMasterDbRepositoryBase<,>), typeof(MasterDbRepositoryBase<,>));
 services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);//禁止不可为空的引用类型和必须属性
@@ -53,6 +53,7 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>//依赖注入
 
     var servicesDllFile = Path.Combine(basePath, "Service.dll");//需要依赖注入的项目生成的dll文件名称
     var repositoryDllFile = Path.Combine(basePath, "Repository.dll");
+    var mongoDBRepositoryDllFile = Path.Combine(basePath, "MongoDBRepository.dll");
     var assemblysServices = Assembly.LoadFrom(servicesDllFile);
     containerBuilder.RegisterAssemblyTypes(assemblysServices)
         .Where(x => x.FullName != null && x.FullName.EndsWith("Service"))//对比名称最后是否相同然后注入
@@ -63,6 +64,13 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>//依赖注入
         .Where(x => x.FullName != null && x.FullName.EndsWith("Repository"))
               .AsImplementedInterfaces()
               .InstancePerDependency();
+    var assemblysmongoDBRepository = Assembly.LoadFrom(mongoDBRepositoryDllFile);
+    containerBuilder.RegisterAssemblyTypes(assemblysmongoDBRepository)
+        .Where(x => x.FullName != null && x.FullName.EndsWith("Repository"))
+              .AsImplementedInterfaces()
+              .InstancePerDependency();
+    containerBuilder.RegisterType<MongoDBContext>()
+                .As<MongoDBContext>();
 });
 #endregion
 
