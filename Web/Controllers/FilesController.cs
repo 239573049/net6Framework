@@ -98,9 +98,8 @@ namespace Web.Configure
             var path = AppSettings.App("File:path");
             var data= Directory.GetFiles("."+path).Where(a=>string.IsNullOrEmpty(name)||a.ToLower().Contains(name.ToLower()))
                 .Skip((pageNo - 1) * pageSize).Take(pageSize)
-                    .ToList();
-            var count= Directory.GetFiles("." + path).Length;
-            return new PagingModelVM<List<string>>(data, count);
+                    .ToList().Select(f => f.Contains('\\') ? f = f.Replace("\\", "/") : f).ToList();
+            return new PagingModelVM<List<string>>(data, data.Count());
         }
     }
 }
