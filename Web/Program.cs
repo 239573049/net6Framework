@@ -31,7 +31,7 @@ services.AddSignalR().AddRedis(AppSettings.App("redis"));
 services.AddEndpointsApiExplorer();
 services.AddCors(delegate (CorsOptions options)
 {
-    options.AddPolicy("CorsPolicy", delegate (CorsPolicyBuilder corsBuilder)
+    options.AddPolicy("CorsPolicy", corsBuilder=>
     {
         corsBuilder.SetIsOriginAllowed((string _) => true).AllowAnyMethod().AllowAnyHeader()
             .AllowCredentials();

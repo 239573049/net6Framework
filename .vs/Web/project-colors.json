@@ -35,7 +35,12 @@
       "ProjectGuid": "d5b602e2-271e-42c0-b56f-cd96bf98fe09",
       "DisplayName": "Repository",
       "ColorIndex": 5
+    },
+    "e8d453c3-a6f0-4769-8146-a38ef1e40d54": {
+      "ProjectGuid": "e8d453c3-a6f0-4769-8146-a38ef1e40d54",
+      "DisplayName": "MongoDBRepository",
+      "ColorIndex": 6
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 7
 }

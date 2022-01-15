@@ -15,13 +15,20 @@ namespace Web.Global
         private readonly IWebHostEnvironment _env;
 
         private readonly ILogger<GlobalExceptionsFilter> _loggerHelper;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="env"></param>
+        /// <param name="loggerHelper"></param>
         public GlobalExceptionsFilter(IWebHostEnvironment env, ILogger<GlobalExceptionsFilter> loggerHelper)
         {
             _env = env;
             _loggerHelper = loggerHelper;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="context"></param>
         [DebuggerStepThrough]
         public override void OnException(ExceptionContext context)
         {
