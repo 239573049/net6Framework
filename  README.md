@@ -1,3 +1,6 @@
+### 项目迁移至 进击的码农 组织，
+欢迎各位大佬加入！
+
 ### 第一步配置连接字符串：
 先更改配置文件 web项目下的appsettings.json
 如果是sqlservice 更改sqlservice的数据库连接字符串改成自己的
