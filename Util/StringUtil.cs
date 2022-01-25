@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Util
 {
@@ -12,13 +12,7 @@ namespace Util
         /// <returns></returns>
         public static string GetString(int s)
         {
-            string data = "";
-            var random = new Random();
-            for (int i = 0; i < s; i++)
-            {
-                data += str[random.Next(str.Length - 1)];
-            }
-            return data;
+            return Guid.NewGuid().ToString();
         }
 
         /// <summary>
@@ -30,14 +24,7 @@ namespace Util
         {
             return await Task.Run(() =>
             {
-
-                string data = "";
-                var random= new Random();
-                for (int i = 0; i < s; i++)
-                {
-                    data += str[random.Next(str.Length - 1)];
-                }
-                return data;
+                return Guid.NewGuid().ToString();
             });
         }
     }
