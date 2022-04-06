@@ -47,7 +47,7 @@ namespace Token.PCWebApi.Global
         /// <param name="Description"></param>
         /// <param name="contact"></param>
         /// <exception cref="ArgumentNullException"></exception>
-        public static void AddSwaggerSetup(this IServiceCollection service, string version, string title, string Description, Contact contact)
+        public static IServiceCollection AddSwaggerSetup(this IServiceCollection service, string version, string title, string Description, Contact contact)
         {
             if (service == null)
             {
@@ -97,6 +97,8 @@ namespace Token.PCWebApi.Global
                     Type = SecuritySchemeType.ApiKey
                 });
             });
+
+            return service;
         }
     }
 }

@@ -1,5 +1,6 @@
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Management.WebCore.Serilog;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using MongoDBRepository.Repositorys;
@@ -16,15 +17,16 @@ using static Token.PCWebApi.Global.SwaggerSetup;
 var builder = WebApplication.CreateBuilder(args);
 #region service
 var services = builder.Services;
-services.AddSingleton(new AppSettings(builder.Environment.ContentRootPath));
-services.AddSingleton<IRedis, Redis>();//Ioc控制反转
-services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-services.AddSingleton<IPrincipalAccessor, PrincipalAccessor>();
-services.AddDbContext<MasterDbContext>(option => option.UseMySql(AppSettings.App("mysql"), new MySqlServerVersion(new Version(5, 0, 26))));
-services.AddTransient(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
-services.AddTransient(typeof(IMasterDbRepositoryBase<,>), typeof(MasterDbRepositoryBase<,>));
-services.AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);//禁止不可为空的引用类型和必须属性
-services.AddSwaggerSetup("1", "Web Api", "Web API", new Contact { Email = "239573049@qq.com", Name = "Token", Url = new Uri("https://gitee.com/hejiale010426") });
+services.AddSerilog()
+    .AddSingleton(new AppSettings(builder.Environment.ContentRootPath))
+    .AddSingleton<IRedis, Redis>()//Ioc控制反转
+    .AddSingleton<IHttpContextAccessor, HttpContextAccessor>()
+    .AddSingleton<IPrincipalAccessor, PrincipalAccessor>()
+    .AddDbContext<MasterDbContext>(option => option.UseMySql(AppSettings.App("mysql"), new MySqlServerVersion(new Version(5, 0, 26))))
+    .AddTransient(typeof(IUnitOfWork<>), typeof(UnitOfWork<>))
+    .AddTransient(typeof(IMasterDbRepositoryBase<,>), typeof(MasterDbRepositoryBase<,>))
+    .AddSwaggerSetup("1", "Web Api", "Web API", new Contact { Email = "239573049@qq.com", Name = "Token", Url = new Uri("https://gitee.com/hejiale010426") })
+    .AddControllers(options => options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true);
 services.AddAutoMapper(new List<Assembly> { Assembly.Load("Token.Application"), Assembly.Load("Token.WebCore") });
 RedisHelper.Initialization(new CSRedis.CSRedisClient(AppSettings.App("redis")));//redis工具
 services.AddSignalR().AddRedis(AppSettings.App("redis"));
